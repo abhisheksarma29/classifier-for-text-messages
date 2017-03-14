@@ -39,7 +39,7 @@ nl=df.reply_to[0]
 
 nl='NaN'
 featuresets=[]  
-
+#counts of words
 def lexical_features(txt):
     m_count=p_count=advs_count=q_count=neg_count=0 
     count=0
@@ -69,6 +69,7 @@ def lexical_features(txt):
     
     return features
 
+#basic features , is it reply or not, not needed in reviews
 def basic_features(reply_by,reply_to,text,Sl_no):
         
     bfeatures={}
@@ -86,6 +87,7 @@ def basic_features(reply_by,reply_to,text,Sl_no):
         
     return bfeatures
 
+#sentiment features
 def senti_features(text):
     sfeatures={}#OrderedDict()
     #remove non-ascii    

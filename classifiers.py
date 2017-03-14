@@ -23,6 +23,7 @@ pos_list =pos_list[35:]
 neg_list = [line.rstrip() for line in neg.readlines()] 
 neg_list=neg_list[35:]
 
+#returns subjective scores with the help of a subjective dictionary
 class HpSubj:
     def __init__(self):
            
@@ -61,7 +62,7 @@ class HpSubj:
         print subjective_count
         print len(sent_tokenize(text))
         return subjective_score
-            
+#returns sentiment score            
 class SentimentScore:
     def classify(self,text):
         sent_score={}        

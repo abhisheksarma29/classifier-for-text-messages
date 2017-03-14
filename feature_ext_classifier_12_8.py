@@ -134,42 +134,9 @@ def just_return_label(text):
 
 
 
-
-
-     
-    
-    
-        
-    
-    
-#jn={}    
-#final_features=[]   
-#l_features=[]
-#b_features=[]
-#for k in range(0, len(df)/10):
-#    
-#    l_features.append(lexical_features(df.text[k]))
-#    b_features.append(basic_features(df.reply_by[k],df.reply_to[k],df.text[k],df.Sl_no[k]))    
-#    jn=lexical_features(df.text[k])+basic_features(df.reply_by[k],df.reply_to[k],df.text[k],df.Sl_no[k])
-#    final_features.append(jn)    
-#    features["modal_count"] =[frequency[modal] += 1 for word in txt.split() if word in modals]
-#    features["last_letter"] = name[-1].lower()
-#    for letter in 'abcdefghijklmnopqrstuvwxyz':
-#        features["count({})".format(letter)] = name.lower().count(letter)
-#        features["has({})".format(letter)] = (letter in name.lower())
-
 lda,dictionary,corpus=lda_topic_gen(test1)
-#lda_topic=lda_topic_id(df.text[402])
-#top1,top2=lda_topic_features(lda_topic)
 
-#for k in range(0,len(df)):
-#    featuresets = [(lexical_features(df.text[k]).items()\
-#                    +basic_features(df.reply_by[k],df.reply_to[k],df.text[k],df.Sl_no[k]).items()\
-#                    +senti_features(df.text[k]).items()\
-#                    +lda_topic_features(df.text[k]).items(),just_return_label(df.label[k])) ]
-
-
-
+#make a dictionary of features
 featuresets = [(dict(lexical_features(df.text[k]).items() \
                 +basic_features(df.reply_by[k],df.reply_to[k],df.text[k],df.Sl_no[k]).items() \
                 +senti_features(df.text[k]).items() \

@@ -4,7 +4,7 @@ Created on Thu Aug 25 02:32:08 2016
 
 @author: Abhishek Sharma
 """
-
+# subjective dictionary :subjdic
 class SubClues:
     def __init__(self, sc_path="C:\Users\Abhishek Sharma\Desktop\AN\code\subclues.tff"):
         self.d_file=open(sc_path)
